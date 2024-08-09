@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Crear un objeto Scanner para leer la entrada desde el teclado
+        Scanner scanner = new Scanner(System.in);
+
+        // Validar calificacion numerica
+        System.out.print("Ingrese su calificacion (1 a 10): ");
+        int calificacion = scanner.nextInt();
+
+        // Determinar la categoria usando un switch
+        switch (calificacion) {
+
+            case 1:
+            case 2:
+                System.out.println("Su calificacion es: F");
+                break;
+
+            case 3:
+            case 4:
+                System.out.println("Su calificacion es: D");
+                break;
+
+            case 5:
+            case 6:
+                System.out.println("Su calificacion es: C");
+                break;
+
+            case 7:
+            case 8:
+                System.out.println("Su calificacion es: B");
+                break;
+
+            case 9:
+            case 10:
+                System.out.println("Su calificacion es: A");
+                break;
+
+            default:
+                System.out.println("Número invalido, por favor validar");
+                break;
+        }
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,56 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        // Crear un objeto de variables A B
+
+        Scanner scanner = new Scanner(System.in);
+
+        // variables a b c
+
+        System.out.print("Ingrese el valor para A: ");
+        double A = scanner.nextDouble();
+
+        System.out.print("Ingrese el valor para B: ");
+        double B = scanner.nextDouble();
+
+        System.out.print("Ingrese el valor para C: ");
+        double C = scanner.nextDouble();
+
+        // validación distintos valores
+
+        if (A == B || A == C || B == C) {
+
+            System.out.println("Error: Los valores deben ser distintos.");
+        } else {
+
+            // validacion mayor y menor
+
+
+            double mayor = A;
+            double menor = A;
+
+            if (B > mayor) {
+                mayor = B;
+            }
+            if (C > mayor) {
+                mayor = C;
+            }
+
+            if (B < menor) {
+                menor = B;
+            }
+            if (C < menor) {
+                menor = C;
+            }
+
+            // Imprimir el mayor y el menor
+
+            System.out.println("El valor mayor es: " + mayor);
+
+            System.out.println("El valor menor es: " + menor);
+        }
+
+        scanner.close();
+    }
+}
